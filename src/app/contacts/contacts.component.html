@@ -1,0 +1,96 @@
+<div id="container" fxLayout="column" fxLayoutAlign="space-between center">
+  <md-toolbar (window:scroll)="onScroll()" (window:resize)="onResize($event)" [@toolbarChange]="toolbarState" color="primary">
+  <div id="toolbar-image" [@toolbarImage]="toolbarState"></div>
+    <div id="toolbar-start-buttons">
+      <button mdTooltip="Go Back" md-icon-button (click)="openSnackBar()"><md-icon>arrow_back</md-icon></button>
+    </div>
+    <span fxFlex id="toolbar-title" [@toolbarTitle]="toolbarState">Dhiraj Salian</span>
+    <div id="toolbar-end-buttons">
+      <button mdTooltip="See Source Code" md-icon-button><md-icon>mode_edit</md-icon></button>
+      <button mdTooltip="Options" md-icon-button><md-icon>more_vert</md-icon></button>
+    </div>
+  </md-toolbar>
+  <button  mdTooltip="Buy me coffee!!!" mdTooltipPosition="left" color="accent" [@toolbarFab]="toolbarState" id="fab-button" md-fab><md-icon >attach_money</md-icon></button>
+  <div id="content" [@contentStart]="toolbarState" fxLayout="column" fxLayoutAlign="space-between stretch">
+    <md-card>
+      <md-card-header>
+        <div md-card-avatar class="header-image"></div>
+        <md-card-title>Dhiraj Salian</md-card-title>
+        <md-card-subtitle>dhirajs / dr.n0d3 / r00t265</md-card-subtitle>
+      </md-card-header>
+      <md-card-content>
+        <p>
+          I am a Computers and Communications Engineer. I love making web sites with web technologies such as Angular (FrontEnd), MeteorJs or ExpressJs (Backend).
+          I love competitive programming and can be seen participating in competitive programming contests in sites like TopCoder, HackerRank, HackerEarth, etc.
+          I also love learning hacking techniques and reading research papers about them.
+        </p>
+      </md-card-content>
+      <md-card-actions>
+        <button md-button>LIKE</button>
+        <button md-button>SHARE</button>
+      </md-card-actions>
+    </md-card>
+    <md-card>
+      <md-card-header>
+        <md-icon md-card-avatar>work</md-icon>
+        <md-card-title>Projects</md-card-title>
+        <md-card-subtitle>Work hard in silence let success make the noise...</md-card-subtitle>
+      </md-card-header>
+      <md-card-content>
+
+
+        <md-list>
+          <h3 md-subheader>dhirajs</h3>
+          <md-list-item *ngFor="let project of cpprojects">
+            <md-icon md-list-icon>code</md-icon>
+            <h4 md-line>{{project.name}}</h4>
+            <p md-line> {{project.description}}</p>
+          </md-list-item>
+          <md-divider></md-divider>
+          <h3 md-subheader>dr.n0d3</h3>
+          <md-list-item *ngFor="let project of wdprojects">
+            <md-icon md-list-icon>folder</md-icon>
+            <h4 md-line>{{project.name}}</h4>
+            <p md-line> {{project.description}} </p>
+          </md-list-item>
+        </md-list>
+
+
+      </md-card-content>
+    </md-card>
+    <md-card>
+      <md-card-header>
+       <md-icon md-card-avatar>people</md-icon>
+       <md-card-title>Contact Me</md-card-title>
+        <md-card-subtitle>Waiting for your message...</md-card-subtitle>
+      </md-card-header>
+      <md-card-content>
+        <form>
+        <table class="full-width" cellspacing="0"><tr>
+          <td><md-input-container class="full-width">
+            <input mdInput placeholder="First Name">
+          </md-input-container></td>
+          <td><md-input-container class="full-width">
+            <input mdInput placeholder="Last Name">
+          </md-input-container></td>
+        </tr></table>
+
+        <md-radio-group class="full-width">
+          <span>Required : </span>
+          <md-radio-button value="coder">Competitive Coder</md-radio-button>
+          <md-radio-button value="developer">Web Developer</md-radio-button>
+          <md-radio-button value="hacker">Ethical Hacker</md-radio-button>
+        </md-radio-group>
+
+
+        <p>
+          <md-input-container class="full-width">
+            <textarea mdInput placeholder="Description"></textarea>
+          </md-input-container>
+        </p>
+        </form>
+        <button md-button>Submit</button>
+      </md-card-content>
+    </md-card>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+#container{
+}
+md-toolbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%  !important;
+}
+md-card{
+  margin-bottom: 10px;
+}
+md-radio-button{
+  margin-left: 10%;
+}
+#content{
+  position: absolute;
+  width: 90%;
+}
+#toolbar-image{
+  position: absolute;
+  background-image: url('../../assets/programer.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+}
+#toolbar-title{
+  position: absolute;
+}
+#toolbar-start-buttons{
+  position: absolute;
+  left:0;
+}
+#toolbar-end-buttons{
+  position: absolute;
+  right:0;
+}
+#fab-button{
+  position: fixed;
+  z-index: 5;
+  right: 3%;
+  top:55%;
+}
+.grid-cards{
+}
+.full-width{
+  width: 100%;
+}
+.header-image {
+  background-image: url('../../assets/me200.png');
+  background-size: cover;
+}
